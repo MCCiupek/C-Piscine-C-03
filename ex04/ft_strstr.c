@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mciupek <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/11 23:04:48 by mciupek           #+#    #+#             */
-/*   Updated: 2019/06/12 16:35:30 by mciupek          ###   ########.fr       */
+/*   Created: 2019/06/12 19:27:18 by mciupek           #+#    #+#             */
+/*   Updated: 2019/06/12 23:34:56 by mciupek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
+	int	i;
+	int j;
 
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	if (to_find[0] == '\0')
+		return (str);
+	while (str[i] != '\0')
+	{
+		if (str[i] == to_find[0])
+		{
+			j = 0;
+			while (str[i + j] == to_find[j])
+			{
+				if (to_find[j + 1] == '\0')
+					return (&str[i]);
+				j++;
+			}
+		}
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	return ("(null)");
 }
