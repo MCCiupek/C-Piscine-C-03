@@ -6,7 +6,7 @@
 /*   By: mciupek <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 19:27:18 by mciupek           #+#    #+#             */
-/*   Updated: 2019/06/12 23:34:56 by mciupek          ###   ########.fr       */
+/*   Updated: 2019/06/13 21:51:23 by mciupek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ char	*ft_strstr(char *str, char *to_find)
 		}
 		i++;
 	}
-	return ("(null)");
+	return (NULL);
 }

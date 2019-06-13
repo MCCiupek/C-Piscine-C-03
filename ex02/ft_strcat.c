@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mciupek <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/12 19:19:23 by mciupek           #+#    #+#             */
-/*   Updated: 2019/06/13 15:46:29 by mciupek          ###   ########.fr       */
+/*   Created: 2019/06/12 16:37:09 by mciupek           #+#    #+#             */
+/*   Updated: 2019/06/13 15:40:22 by mciupek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strcat(char *dest, char *src)
 {
-	int				len;
-	unsigned int	i;
+	int	len;
+	int i;
 
 	i = 0;
 	len = 0;
 	while (dest[len] != '\0')
 		len++;
-	while (src[i] != '\0' && i < nb)
+	while (src[i] != '\0')
 	{
 		dest[len + i] = src[i];
 		i++;
